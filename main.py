@@ -1,6 +1,8 @@
 # This function generates all subsets of a given set S using the binary
 # counting method and returns them in an array.
 
+import time
+
 def generate_all_subsets(set_S):
 	subsets = {}
 	#  TODO
@@ -63,5 +65,8 @@ companies = [
 	["U", 8, 18]
 ]
 
+start_time = time.time()
 optimalSubset = career_fair_planner(companies, 120)
+total_time = round(time.time() - start_time, 7)
 display_results(optimalSubset)
+print(f"Power set took {total_time} seconds")
